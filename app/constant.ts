@@ -1,7 +1,7 @@
-export const OWNER = "Yidadaa";
-export const REPO = "ChatGPT-Next-Web";
-export const REPO_URL = `https://github.com/${OWNER}/${REPO}`;
-export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
+export const OWNER = "Rikka";
+export const REPO = "ChatGPT Rikka";
+export const REPO_URL = `http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VI-46dRaRV69xoTp46DGhHAw3n9W23in&authKey=GP8pyY1%2FMobqRUQBoP%2F4plbGfzw3%2BA0j5E4mSYbKgi0E%2F22RW4cIn9bv9RfFDiXC&noverify=0&group_code=163505765`;
+export const REPO_URL = `http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=VI-46dRaRV69xoTp46DGhHAw3n9W23in&authKey=GP8pyY1%2FMobqRUQBoP%2F4plbGfzw3%2BA0j5E4mSYbKgi0E%2F22RW4cIn9bv9RfFDiXC&noverify=0&group_code=163505765`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
 export const RELEASE_URL = `${REPO_URL}/releases`;
 export const FETCH_COMMIT_URL = `https://api.github.com/repos/${OWNER}/${REPO}/commits?per_page=1`;
