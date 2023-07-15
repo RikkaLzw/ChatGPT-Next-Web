@@ -194,15 +194,12 @@ export function SideBar(props: { className?: string }) {
           />
         </div>
         <div className={styles["sidebar-action"]}style={{ display: 'block' }}> 
-           <a href="https://www.rikkadraw.asia" target="_blank" className={styles["no-underline"]}> 
+           <a href="https://www.rikkadraw.asia" target="_blank" > 
               <IconButton
                 text={"AI生图"}
                 shadow
               />
             </a> 
-            .no-underline {
-              text-decoration: none;
-            }
          </div>
       </div>
 
