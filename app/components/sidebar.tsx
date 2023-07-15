@@ -120,7 +120,7 @@ export function SideBar(props: { className?: string }) {
           ChatGPT Rikka
         </div>
         <div className={styles["sidebar-sub-title"]}>
-          洁宝贝は世界一です.
+          洁宝贝は世界一です.<br />点击下方章鱼猫联系作者.
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
           <ChatGptIcon />
