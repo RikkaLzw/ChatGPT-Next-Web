@@ -108,4 +108,16 @@ export const DEFAULT_MODELS = [
     name: "gpt-3.5-turbo-16k-0613",
     available: true,
   },
+    {
+    name: "claude-instant",
+    available: true,
+  },
+    {
+    name: "claude-instant-100k",
+    available: true,
+  },
+    {
+    name: "claude-2-100k",
+    available: true,
+  },
 ] as const;
