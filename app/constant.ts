@@ -128,4 +128,8 @@ export const DEFAULT_MODELS = [
     name: "poe-gpt-4-32k",
     available: true,
   },
+  {
+    name: "gpt-4-internet",
+    available: true,
+  },
 ] as const;
