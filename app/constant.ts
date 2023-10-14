@@ -69,6 +69,10 @@ export const DEFAULT_MODELS = [
     available: true,
   },
   {
+    name: "poe-gpt-4",
+    available: true,
+  },
+  {
     name: "gpt-4-0314",
     available: true,
   },
@@ -113,11 +117,15 @@ export const DEFAULT_MODELS = [
     available: true,
   },
     {
-    name: "claude-instant-100k",
+    name: "poe-claude-instant-100k",
     available: true,
   },
     {
-    name: "claude-2-100k",
+    name: "poe-claude-2-100k",
+    available: true,
+  },
+  {
+    name: "poe-gpt-4-32k",
     available: true,
   },
 ] as const;
