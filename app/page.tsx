@@ -11,6 +11,7 @@ const serverConfig = getServerSideConfig();
 
 export default async function App() {
   useEffect(() =>  {
+  if (typeof document !== 'undefined') {
     // 创建一个新的script元素
     const script = document.createElement('script');
 
@@ -32,7 +33,8 @@ export default async function App() {
 
     // 将第二个script元素添加到head中
     document.head.appendChild(script2);
-  }, []);
+  }
+}, []);
   return (
     <>
       <Home />
