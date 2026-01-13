@@ -263,9 +263,9 @@ export const useAccessStore = createPersistStore(
         .then((res) => {
           const defaultModel = res.defaultModel ?? "";
           if (defaultModel !== "") {
-            const [model, providerName] = getModelProvider(defaultModel);
+            const [model] = getModelProvider(defaultModel);
             DEFAULT_CONFIG.modelConfig.model = model;
-            DEFAULT_CONFIG.modelConfig.providerName = providerName as any;
+            // Keep provider as OpenAI, don't auto-switch
           }
 
           return res;

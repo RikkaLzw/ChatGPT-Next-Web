@@ -29,12 +29,12 @@ export function ModelConfigList(props: {
           value={value}
           align="left"
           onChange={(e) => {
-            const [model, providerName] = getModelProvider(
+            const [model] = getModelProvider(
               e.currentTarget.value,
             );
             props.updateConfig((config) => {
               config.model = ModalConfigValidator.model(model);
-              config.providerName = providerName as ServiceProvider;
+              // Keep provider as OpenAI, don't auto-switch
             });
           }}
         >
@@ -62,9 +62,9 @@ export function ModelConfigList(props: {
           onChange={(e) => {
             props.updateConfig(
               (config) =>
-                (config.temperature = ModalConfigValidator.temperature(
-                  e.currentTarget.valueAsNumber,
-                )),
+              (config.temperature = ModalConfigValidator.temperature(
+                e.currentTarget.valueAsNumber,
+              )),
             );
           }}
         ></InputRange>
@@ -82,9 +82,9 @@ export function ModelConfigList(props: {
           onChange={(e) => {
             props.updateConfig(
               (config) =>
-                (config.top_p = ModalConfigValidator.top_p(
-                  e.currentTarget.valueAsNumber,
-                )),
+              (config.top_p = ModalConfigValidator.top_p(
+                e.currentTarget.valueAsNumber,
+              )),
             );
           }}
         ></InputRange>
@@ -102,9 +102,9 @@ export function ModelConfigList(props: {
           onChange={(e) =>
             props.updateConfig(
               (config) =>
-                (config.max_tokens = ModalConfigValidator.max_tokens(
-                  e.currentTarget.valueAsNumber,
-                )),
+              (config.max_tokens = ModalConfigValidator.max_tokens(
+                e.currentTarget.valueAsNumber,
+              )),
             )
           }
         ></input>
@@ -125,10 +125,10 @@ export function ModelConfigList(props: {
               onChange={(e) => {
                 props.updateConfig(
                   (config) =>
-                    (config.presence_penalty =
-                      ModalConfigValidator.presence_penalty(
-                        e.currentTarget.valueAsNumber,
-                      )),
+                  (config.presence_penalty =
+                    ModalConfigValidator.presence_penalty(
+                      e.currentTarget.valueAsNumber,
+                    )),
                 );
               }}
             ></InputRange>
@@ -147,10 +147,10 @@ export function ModelConfigList(props: {
               onChange={(e) => {
                 props.updateConfig(
                   (config) =>
-                    (config.frequency_penalty =
-                      ModalConfigValidator.frequency_penalty(
-                        e.currentTarget.valueAsNumber,
-                      )),
+                  (config.frequency_penalty =
+                    ModalConfigValidator.frequency_penalty(
+                      e.currentTarget.valueAsNumber,
+                    )),
                 );
               }}
             ></InputRange>
@@ -167,8 +167,8 @@ export function ModelConfigList(props: {
               onChange={(e) =>
                 props.updateConfig(
                   (config) =>
-                    (config.enableInjectSystemPrompts =
-                      e.currentTarget.checked),
+                  (config.enableInjectSystemPrompts =
+                    e.currentTarget.checked),
                 )
               }
             ></input>
@@ -223,8 +223,8 @@ export function ModelConfigList(props: {
           onChange={(e) =>
             props.updateConfig(
               (config) =>
-                (config.compressMessageLengthThreshold =
-                  e.currentTarget.valueAsNumber),
+              (config.compressMessageLengthThreshold =
+                e.currentTarget.valueAsNumber),
             )
           }
         ></input>
@@ -250,12 +250,12 @@ export function ModelConfigList(props: {
           aria-label={Locale.Settings.CompressModel.Title}
           value={compressModelValue}
           onChange={(e) => {
-            const [model, providerName] = getModelProvider(
+            const [model] = getModelProvider(
               e.currentTarget.value,
             );
             props.updateConfig((config) => {
               config.compressModel = ModalConfigValidator.model(model);
-              config.compressProviderName = providerName as ServiceProvider;
+              // Keep provider as OpenAI, don't auto-switch
             });
           }}
         >
