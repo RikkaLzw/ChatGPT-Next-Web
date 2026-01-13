@@ -65,7 +65,7 @@ export const DEFAULT_CONFIG = {
 
   modelConfig: {
     model: "claude-opus-4-5-20251101" as ModelType,
-    providerName: "Anthropic" as ServiceProvider,
+    providerName: "OpenAI" as ServiceProvider,
     temperature: 0.5,
     top_p: 1,
     max_tokens: 4000,
@@ -74,7 +74,7 @@ export const DEFAULT_CONFIG = {
     sendMemory: true,
     historyMessageCount: 4,
     compressMessageLengthThreshold: 1000,
-    compressModel: "",
+    compressModel: "claude-opus-4-5-20251101",
     compressProviderName: "",
     enableInjectSystemPrompts: true,
     template: config?.template ?? DEFAULT_INPUT_TEMPLATE,
